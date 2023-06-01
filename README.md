@@ -25,3 +25,4 @@ make denodelete
 
 ## Note:
   As a security meause 'run' only works with cache dependecies, so first you have to `deno task cache` and then you can `deno task run`
+

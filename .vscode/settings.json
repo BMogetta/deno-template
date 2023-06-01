@@ -38,5 +38,5 @@
 	"terminal.integrated.copyOnSelection": true,
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.fontSize": 12,
-	"terminal.integrated.fontFamily": "MesloLGS NF",
+	"terminal.integrated.fontFamily": "monospace",
 }
