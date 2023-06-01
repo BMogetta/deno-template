@@ -1,0 +1,42 @@
+{
+	// Explorer
+	"explorer.confirmDelete": false,
+	"explorer.compactFolders": false,
+	// Git
+	"git.autofetch": true,
+	// Deno
+	"deno.enable": true,
+	"deno.lint": true,
+	"deno.unstable": true,
+	// Worbench
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.showTabs": true,
+	"workbench.statusBar.visible": true,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editorAssociations": {
+		"*.wasm": "default"
+	},
+	// Editor
+	"editor.fontSize": 14,
+	"editor.wordWrap": "on",
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+	"editor.bracketPairColorization.enabled": true,
+	"editor.colorDecorators": true,
+	"editor.fontFamily": "Consolas, 'Courier New', monospace",
+	"editor.formatOnSave": true,
+	"editor.hover.enabled": true,
+	"editor.stickyScroll.enabled": true,
+	"editor.renderWhitespace": "all",
+	"editor.minimap.enabled": true,
+	"editor.rename.enablePreview": false,
+	// Files
+	"files.trimTrailingWhitespace": true,
+	// Terminal
+	"terminal.integrated.copyOnSelection": true,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.fontFamily": "MesloLGS NF",
+}
