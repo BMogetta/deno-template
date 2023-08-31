@@ -1,0 +1,13 @@
+#env
+.env
+
+#testing
+coverage/*
+lcov.info
+out/*
+
+#api logs
+api_logs.json
+
+#Local deno file
+deno.lock

@@ -3,8 +3,10 @@
 		"deps": "./deps.ts",
 		"std/": "https://deno.land/std@0.188.0/",
 		"third/": "https://deno.land/x/",
-		"schemas": "./src/schemas/index.ts",
-		"mock/": "./src/mock/",
-		"environment": "./src/constants/environment.ts"
+		"src/": "./src/",
+		"config/": "./config/",
+		"scripts/": "./scripts/",
+		"docs/": "./docs/",
+		"tests/": "./tests/"
 	}
 }

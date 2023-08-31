@@ -17,11 +17,9 @@ make denodelete
 `deno task <script_name>`
 
 - cache: cache dependecies and write lock file
-- dev: run program in watch mode
-- run: run program once
-- bench: run program with benchmarking tool
+- dev: run server in watch mode
+- server: run server
 - test: run test with coverage output
-- compile: compiles proyect into binary; output name -> por_pol_api (change this in deno.jsonc)
 
 ## Note:
   As a security meause 'run' only works with cache dependecies, so first you have to `deno task cache` and then you can `deno task run`

@@ -1,0 +1,4 @@
+#!/bin/sh
+deno lint || exit 1
+deno fmt || exit 1
+git add -A .

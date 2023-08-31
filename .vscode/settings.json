@@ -37,6 +37,18 @@
 	// Terminal
 	"terminal.integrated.copyOnSelection": true,
 	"terminal.integrated.cursorBlinking": true,
-	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.fontFamily": "monospace",
+	//
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"files.exclude": {
+		"**/.git": true
+	}
 }

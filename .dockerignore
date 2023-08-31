@@ -1,0 +1,13 @@
+# folders
+.vscode
+.github
+config/githooks/*
+public/*
+coverage/*
+tests/*
+
+# files
+.gitignore
+README.md
+.env.example
+Makefile

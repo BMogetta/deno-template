@@ -1,0 +1,41 @@
+#!/bin/sh
+commit_message=$(cat "$1")
+
+# Extract parts of the commit message
+commit_header=$(echo "$commit_message" | sed -n '1p')
+commit_body=$(echo "$commit_message" | sed -n '2,$p' | sed '/./,$!d' | head -n -1)
+commit_footer=$(echo "$commit_message" | sed -n '$p')
+
+# Check commit header
+if ! echo "$commit_header" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(\(.+?\))?!?: .{1,}$"; then
+    echo "Aborting commit. Your commit message header is invalid. Please follow the standards: type(scope)!: description" >&2
+    exit 1
+fi
+
+# Check commit header length
+if ! echo "$commit_header" | grep -qE "^.{1,88}$"; then
+    echo "Aborting commit. Your commit message header is too long." >&2
+    exit 1
+fi
+
+# Check for blank line after commit header
+if [ "$(echo "$commit_message" | sed -n '2p')" != "" ]; then
+    echo "Aborting commit. Your commit body must begin one blank line after the description." >&2
+    exit 1
+fi
+
+# Check footer
+if ! echo "$commit_footer" | grep -qE "^[-a-zA-Z]+[:#] "; then
+    echo "Aborting commit. Your commit footer is not properly formatted. It should be 'token: value' or 'token # value'." >&2
+    exit 1
+fi
+
+# Check for BREAKING CHANGE in footer or header
+if echo "$commit_footer" | grep -qE "^BREAKING CHANGE: "; then
+    :
+elif echo "$commit_header" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(\(.+?\))?!: "; then
+    :
+else
+    echo "Aborting commit. Breaking changes must be indicated in the type/scope prefix of a commit, or as an entry in the footer." >&2
+    exit 1
+fi
